@@ -1,0 +1,14 @@
+div.workoutContainer
+    h4 10 premières sessions
+    div.workoutBlock
+        div.block
+            each item in tenDays 
+                div.workoutCheckbox
+                    ul
+                        li #{item.trac} tractions
+                        li #{item.dips} dips
+                        li #{item.pomp} pompes
+                    label.checkbox
+                        span.spanCheck
+                        input(type='checkbox' value=item.id class='ifCheck' id=item.id onclick="check()")
+
