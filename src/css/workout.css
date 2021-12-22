@@ -63,10 +63,10 @@
 }
 
 .checkbox {
-    display: inline-flex;
+    display: inline-block;
     cursor: pointer;
     position: absolute;
-    bottom:0%;
+    bottom:-3%;
     width: 100%;
 }
 
@@ -84,13 +84,13 @@
     border-radius: 4px;
     outline: none;
     transition-duration: 0.3s;
-    background-color: black;
+    background-color: #293241;
     cursor: pointer;
   }
 
 .checkbox > input:checked {
 
-    background-color: #34495E;
+    background-color: #e0fbfc;
 }
 .spanCheck{
     position: absolute;
@@ -104,8 +104,15 @@
     content: '\2713';
     display: block;   
     position: absolute;
+    color: #293241;
 }
 
-input:checked ~ .spanCheck {
-    color: #41B883;
+
+.checkbox > .ifCheckTrac{
+    height: 1px;
+    width: 1px;
+    left: 0;
+    position: absolute;
+    z-index: 100;
+    visibility: hidden;
 }

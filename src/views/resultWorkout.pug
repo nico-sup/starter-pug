@@ -1,8 +1,4 @@
--
-    var tenDays = [
-        {trac: '50', dips: '50',pomp: '50'},{trac: '50', dips: '50',pomp: '50'},{trac: '50', dips: '50',pomp: '50'},{trac: '50', dips: '50',pomp: '50'},{trac: '50', dips: '50',pomp: '50'},{trac: '50', dips: '50',pomp: '50'},{trac: '50', dips: '50',pomp: '50'},{trac: '50', dips: '50',pomp: '50'},{trac: '50', dips: '50',pomp: '50'},{trac: '50', dips: '50',pomp: '50'}
-    ]
-
+include data.pug
 doctype html
 html
     head
@@ -13,25 +9,33 @@ html
         title Exploring the Pug template
         script(src="./src/js/test.js") 
         link(rel='stylesheet', href='./src/css/style.css', type='text/css' )
-        link(rel='stylesheet', href='./src/css/head.css', type='text/css' )
-        link(rel='stylesheet', href='./src/css/workout.css', type='text/css' )
+        link(rel='stylesheet', href='./src/css/resultSession.css', type='text/css' )
 
-    body(onload="check()")
-        //- each item in tenDays 
-        //-     input(type='checkbox' value=item.id class='testt' onclick="check()")
-            
-        //- input(value="0" readonly="readonly" type="text" name="total")
+    body(onload="check(); checkReload(); setInputValue()")
+        
         //- input(type="range" readonly="readonly" id='helo')
+        div.resultContainer
+            div.resultWrapper
+                a.back(href='/')
+                    img(src="./src/media/arrow.png")
+                    | Back home
+                h2 Keep it up you have tracked
+                div.wrappDay
+                    input.day(value="0" readonly="readonly"  type="text" name="total") 
+                    p days
 
-        include head.pug
-
-        div.container
-            div.progression
-                h4 Voir ma progression
-                a.progressLink(href='resultWorkout.pug') 
-                    span Accède à toutes tes données :
-                        span nombres de reps 
-                        span Suivi des jours
-                        span Les exercices
-                    img(src="./src/media/progress.png", alt="")
-            include workout.pug
+                div.scoreBoard
+                    div.scoreboardWrapper
+                        div.range
+                            input.day(value="0" readonly="readonly" type="text" name="total") 
+                            input(type="range" min="0" value="" max="10"  name="rangeDay" id='rangeDay')
+                            p days
+                        div.range
+                            input(type="range" min="0" value="" max="200"  name="rangeTrac" id='rangeDay')
+                            p tractions
+                        div.range
+                            input(type="range" min="0" value="" max="10"  name="rangeDay" id='rangeDay')
+                            p days
+                //- input(type="range" readonly="readonly" id='helo')
+                //- input(value="0" readonly="readonly" type="text" name="totalTrac") 
+        

@@ -1,8 +1,4 @@
--
-    var tenDays = [
-        {trac: '50', dips: '50',pomp: '50', id: 1},{trac: '50', dips: '50',pomp: '50', id: 2},{trac: '50', dips: '50',pomp: '50', id: 3},{trac: '50', dips: '50',pomp: '50', id: 4},{trac: '50', dips: '50',pomp: '50', id: 5},{trac: '50', dips: '50',pomp: '50', id: 6}, {trac: '50', dips: '50',pomp: '50', id: 7},{trac: '50', dips: '50',pomp: '50', id: 8}, {trac: '50', dips: '50',pomp: '50', id: 9},{trac: '50', dips: '50',pomp: '50', id: 10}
-    ]
-
+include data.pug
 doctype html
 html
     head
@@ -16,22 +12,25 @@ html
         link(rel='stylesheet', href='./src/css/head.css', type='text/css' )
         link(rel='stylesheet', href='./src/css/workout.css', type='text/css' )
 
-    body(onload="check(); checkReload()")
+    body(onload="check(); checkReload(); setInputValue()")
+
         //- each item in tenDays 
         //-     input(type='checkbox' value=item.id class='testt' onclick="check()")
             
-        //- input(value="0" readonly="readonly" type="text" name="total")
-        //- input(type="range" readonly="readonly" id='helo')
+        input(value="" readonly="readonly" type="text" name="total" style= "display:none;")
+        input(type="range" min="0" value="" max="10"  name="rangeDay" id='rangeDay' style= "display:none;")
+        input(type="range" min="0" value="" max="500"  name="rangeTrac" id='rangeDay' style= "display:none;")
 
         include head.pug
 
         div.container
             div.progression
-                h4 Voir ma progression
+                h4 See my progression
                 a.progressLink(href='./src/views/resultWorkout.html') 
-                    span Accède à toutes tes données :
-                        span nombres de reps 
-                        span Suivi des jours
-                        span Les exercices
+                    span Access all your data
+                        span number of reps 
+                        span Tracking of days
+                        span Exercices
                     img(src="./src/media/progress.png", alt="")
             include workout.pug
+            a.viewSession(href='resultWorkout') view session
