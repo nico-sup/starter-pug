@@ -61,6 +61,7 @@ h2{
     align-items: flex-start;
     box-shadow: 0 0 20px 3px rgba(152, 193, 217, 0.3);
     border-radius: 10px;
+    background: #3D5A80;
 }
 
 .scoreboardWrapper {
@@ -75,6 +76,7 @@ h2{
 
 .scoreboardWrapper h2{
     width: 100%;
+    color: white;
 }
 
 .range {
