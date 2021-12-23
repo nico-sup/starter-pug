@@ -83,8 +83,3 @@ h4::after {
     height: 100px;
     width: auto;
 }
-
-.viewSession {
-    position: fixed;
-    bottom: 20px;
-}
