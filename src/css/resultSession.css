@@ -148,3 +148,7 @@ background-color: #98c1d9;
 #rangeDay[type="range"]::-ms-fill-upper {  
 background-color: rgba(100, 100, 100, 0.2);
 }
+
+.test{
+    color: white;
+}
