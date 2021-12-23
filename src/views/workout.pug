@@ -10,6 +10,35 @@ div.workoutContainer
                         li #{item.pomp} pompes
                     label.checkbox
                         span.spanCheck
-                        input(type='checkbox' value=item.day class='ifCheck' id=item.id onclick="check()")
+                        input(type='checkbox' value=item.day class='ifCheck' name="ifCheck" id=item.id onclick="check()")
                         input(type='checkbox' value=item.trac class='ifCheckTrac' id=item.id onclick="check()" checked)
 
+div.workoutContainer
+    h4 20 sessions suivantes
+    div.workoutBlock
+        div.block
+            each item in twentyDays 
+                div.workoutCheckbox.twenty
+                    ul
+                        li #{item.trac} tractions
+                        li #{item.dips} dips
+                        li #{item.pomp} pompes
+                    label.checkbox
+                        span.spanCheck
+                        input(type='checkbox' value=item.day class='ifCheck' name="ifCheck" id=item.id onclick="check()")
+                        input(type='checkbox' value=item.trac class='ifCheckTrac' id=item.id onclick="check()" checked)
+
+div.workoutContainer
+    h4 30 sessions suivantes
+    div.workoutBlock
+        div.block
+            each item in thirteenDays 
+                div.workoutCheckbox
+                    ul
+                        li #{item.trac} tractions
+                        li #{item.dips} dips
+                        li #{item.pomp} pompes
+                    label.checkbox
+                        span.spanCheck
+                        input(type='checkbox' value=item.day class='ifCheck' name="ifCheck" id=item.id onclick="check()")
+                        input(type='checkbox' value=item.trac class='ifCheckTrac' id=item.id onclick="check()" checked)
