@@ -45,7 +45,7 @@ h2{
 .day {
     border: none;
     text-align: center;
-    width: 40px;
+    width: 70px;
     font-size: 50px;
     color: #ee6c4d;
 }
@@ -58,14 +58,12 @@ h2{
     overflow: hidden;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    box-shadow: 0 0 20px 3px rgba(152, 193, 217, 0.1);
+    border-radius: 10px;
 }
 
 .scoreboardWrapper {
-    background: rgba( 255, 255, 255, 0.25 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 4px );
-    -webkit-backdrop-filter: blur( 4px );
     height: 100%;
     width: 100%;
     z-index: 10;
@@ -73,6 +71,10 @@ h2{
     justify-content: center;
     align-items: flex-start;
     flex-flow: row wrap;
+}
+
+.scoreboardWrapper h2{
+    width: 100%;
 }
 
 .range {
@@ -92,6 +94,7 @@ h2{
     background: transparent;
     top: 0;
     opacity: 0.2;
+    font-size: 30px;
 }
 
 .range p {

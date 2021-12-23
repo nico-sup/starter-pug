@@ -21,21 +21,29 @@ html
                     | Back home
                 h2 Keep it up you have tracked
                 div.wrappDay
-                    input.day(value="0" readonly="readonly"  type="text" name="total") 
+                    input.day(value="0" readonly="readonly" class="total"  type="text" name="total") 
                     p days
 
                 div.scoreBoard
                     div.scoreboardWrapper
+                        h2 ScoreBoard
                         div.range
-                            input.day(value="0" readonly="readonly" type="text" name="total") 
+                            input.day(value="0" readonly="readonly" type="text" class="total" name="total") 
                             input(type="range" min="0" value="" max="50"  name="rangeDay" id='rangeDay')
                             p days
                         div.range
-                            input(type="range" min="0" value="" max="1000"  name="rangeTrac" id='rangeDay')
+                            input.day(value="0" readonly="readonly" type="text" class="total" name="total") 
+                            input(type="range" min="0" value="" max="2700"  name="rangeTrac" id='rangeDay')
                             p tractions
                         div.range
-                            input(type="range" min="0" value="" max="50"  name="rangeDay" id='rangeDay')
-                            p days
+                            input.day(value="0" readonly="readonly" type="text" class="total" name="total") 
+                            input(type="range" min="0" value="" max="2700"  name="rangeDips" id='rangeDay')
+                            p dips
+                        div.range
+                            input.day(value="0" readonly="readonly" type="text" class="total" name="total") 
+                            input(type="range" min="0" value="" max="2700"  name="rangePomp" id='rangeDay')
+                            p pompes
+
                 //- input(type="range" readonly="readonly" id='helo')
                 //- input(value="0" readonly="readonly" type="text" name="totalTrac") 
         
