@@ -9,4 +9,8 @@ app.get("/", (req, res) => {
 app.get("/resultWorkout", (req, res) => {
     res.render("resultWorkout")
 })
+
+app.get("/chrono", (req, res) => {
+    res.render("chrono")
+})
 app.listen(process.env.PORT || 5000)
