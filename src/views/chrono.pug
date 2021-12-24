@@ -10,8 +10,13 @@ html
         script(src="./src/js/test.js") 
         link(rel='stylesheet', href='./src/css/style.css', type='text/css' )
         link(rel='stylesheet', href='./src/css/chrono.css', type='text/css' )
+        link(rel='stylesheet', href='./src/css/resultSession.css', type='text/css' )
 
     body(onload="check(); checkReload(); setInputValue()")
+
+        a.back.timeBack(href='/')
+            img(src="./src/media/arrow.png")
+            | Back home
 
         div.circleCrono
             span(class="time" id="display") 00:00:00
