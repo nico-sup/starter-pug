@@ -22,10 +22,13 @@ html
         input(value="" readonly="readonly" type="text" class="total" name="total" style= "display:none;")
         input(value="" readonly="readonly" type="text" class="total" name="total" style= "display:none;")
         input(value="" readonly="readonly" type="text" class="total" name="total" style= "display:none;")
+
         input(type="range" min="0" value="" max="50" name="rangeDay" id='rangeDay' style= "display:none;")
         input(type="range" min="0" value="" max="2700"  name="rangeTrac" id='rangeDay' style= "display:none;")
         input(type="range" min="0" value="" max="2700"  name="rangeDips" id='rangeDay' style= "display:none;")
         input(type="range" min="0" value="" max="2700"  name="rangePomp" id='rangeDay' style= "display:none;")
+
+        input(type="text" readonly="readonly" class="inside-circle" name="inside-circle" value="" style="display:none;") 
 
         include head.pug
 
@@ -40,4 +43,11 @@ html
                     img(src="./src/media/progress.png", alt="")
             include workout.pug
             a.viewSession(href='resultWorkout') view session
-            
+
+            div.circle-wrap
+                    div.circle
+                        div.mask.full#menu
+                            div(class="fill" id="test" name="fill")
+                        div.mask.half
+                            div(class="fill" id="test" name="fill")
+                        input(type="text" readonly="readonly" class="inside-circle" name="inside-circle" value="") 

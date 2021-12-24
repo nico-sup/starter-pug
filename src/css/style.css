@@ -83,3 +83,7 @@ h4::after {
     height: 100px;
     width: auto;
 }
+
+.circle-wrap{
+    display: none;
+}

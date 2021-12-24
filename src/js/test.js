@@ -20,6 +20,12 @@ function check() {
         document.getElementsByName("rangeTrac")[0].value = totalTrac;
         document.getElementsByName("rangeDips")[0].value = totalTrac;
         document.getElementsByName("rangePomp")[0].value = totalTrac;
+
+        document.getElementsByClassName("inside-circle")[0].value = totalTrac * 3;
+
+        // document.getElementsByName('fill')[[0]].style.transform = `rotate(${totalTrac}deg)`;
+        // document.getElementsByName('fill')[[1]].style.transform = `rotate(${totalTrac}deg)`;
+        // document.querySelectorAll ("#menu #test")[0].style.transform = `rotate(${totalTrac}deg)`;
       }
     }
 }
@@ -29,6 +35,8 @@ function setInputValue(){
   document.getElementsByClassName("total")[2].value = localStorage.getItem('server2');
   document.getElementsByClassName("total")[3].value = localStorage.getItem('server3');
   document.getElementsByClassName("total")[4].value = localStorage.getItem('server4');
+
+  document.getElementsByClassName("inside-circle")[0].value = localStorage.getItem('totalSession');
 
   document.getElementsByName("totalTrac").value = localStorage.getItem('trac');
   document.getElementsByName("rangeDay")[0].value = localStorage.getItem('rangeDay');
@@ -57,6 +65,9 @@ function checkReload() {
       var input4 = document.getElementsByClassName("total")[4].value;
       localStorage.setItem('server4', input4);
 
+      var inputTotal = document.getElementsByClassName("inside-circle")[0].value;
+      localStorage.setItem('totalSession', inputTotal);
+
 
       var inputTrac = document.getElementsByName("totalTrac").value;
       localStorage.setItem('trac', inputTrac);
@@ -80,4 +91,9 @@ function checkReload() {
   }
 
   window.addEventListener('change', save);
+
 }
+
+
+
+

@@ -23,7 +23,15 @@ html
                 div.wrappDay
                     input.day(value="0" readonly="readonly" class="total"  type="text" name="total") 
                     p days
-
+                
+                div.circle-wrap
+                    div.circle
+                        div.mask.full
+                            div.fill#test
+                        div.mask.half
+                            div.fill#test
+                        input(type="text" readonly="readonly" class="inside-circle" name="inside-circle" value="") 
+                        
                 div.scoreBoard
                     div.scoreboardWrapper
                         h2 ScoreBoard
@@ -43,8 +51,7 @@ html
                             input.day(value="0" readonly="readonly" type="text" class="total" name="total") 
                             input(type="range" disabled min="0" value="" max="2700"  name="rangePomp" id='rangeDay')
                             p pompes
-                h2.test test
-
+                h2 test
                 //- input(type="range" readonly="readonly" id='helo')
                 //- input(value="0" readonly="readonly" type="text" name="totalTrac") 
         
