@@ -6,51 +6,15 @@ html
         meta(http-equiv='X-UA-Compatible', content='IE=edge')
         meta(name='description', content='Some description')
         meta(name='viewport', content='width=device-width, initial-scale=1')
-        title Exploring the Pug template
-        script(src="./src/js/test.js") 
+        link(rel="icon", type="image/png", href="./src/media/favicon.ico")
+        title Name of web app
+        script(src="./src/js/app.js") 
         link(rel='stylesheet', href='./src/css/style.css', type='text/css' )
-        link(rel='stylesheet', href='./src/css/head.css', type='text/css' )
-        link(rel='stylesheet', href='./src/css/workout.css', type='text/css' )
 
-    body(onload="check(); checkReload(); setInputValue()")
+    body
 
-        //- each item in tenDays 
-        //-     input(type='checkbox' value=item.id class='testt' onclick="check()")
-            
-        input(value="" readonly="readonly" type="text" class="total" name="total" style= "display:none;")
-        input(value="" readonly="readonly" type="text" class="total" name="total" style= "display:none;")
-        input(value="" readonly="readonly" type="text" class="total" name="total" style= "display:none;")
-        input(value="" readonly="readonly" type="text" class="total" name="total" style= "display:none;")
-        input(value="" readonly="readonly" type="text" class="total" name="total" style= "display:none;")
-
-        input(type="range" min="0" value="" max="50" name="rangeDay" id='rangeDay' style= "display:none;")
-        input(type="range" min="0" value="" max="2700"  name="rangeTrac" id='rangeDay' style= "display:none;")
-        input(type="range" min="0" value="" max="2700"  name="rangeDips" id='rangeDay' style= "display:none;")
-        input(type="range" min="0" value="" max="2700"  name="rangePomp" id='rangeDay' style= "display:none;")
-
-        input(type="text" readonly="readonly" class="inside-circle" name="inside-circle" value="" style="display:none;") 
+        each item in data 
+            ul(item.id) Starter
+                li(item.list) Pug
 
         include head.pug
-
-        div.container
-            div.progression
-                h4 See my progression
-                a.progressLink(href='./src/views/resultWorkout.html') 
-                    span Access all your data
-                        span number of reps 
-                        span Tracking of days
-                        span Exercices
-                    img(src="./src/media/progress.png", alt="")
-            include workout.pug
-            a.viewSession(href='resultWorkout') view session
-
-            div.circle-wrap
-                    div.circle
-                        div.mask.full#menu
-                            div(class="fill" id="test" name="fill")
-                        div.mask.half
-                            div(class="fill" id="test" name="fill")
-                        input(type="text" readonly="readonly" class="inside-circle" name="inside-circle" value="") 
-            
-            a.chronoButton(href="chrono") 
-                img(src="./src/media/stopwatch.png", alt="")

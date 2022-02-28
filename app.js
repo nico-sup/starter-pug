@@ -6,11 +6,8 @@ app.use("/src", express.static('./src/'));
 app.get("/", (req, res) => {
     res.render("index")
 })
-app.get("/resultWorkout", (req, res) => {
-    res.render("resultWorkout")
-})
+// app.get("/resultWorkout", (req, res) => {
+//     res.render("resultWorkout")
+// })
 
-app.get("/chrono", (req, res) => {
-    res.render("chrono")
-})
 app.listen(process.env.PORT || 5000)
