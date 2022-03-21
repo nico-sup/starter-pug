@@ -1,0 +1,25 @@
+include data.pug
+
+html(lang="en")
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='description', content='Some description')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        link(rel="icon", type="image/png", href="./public/media/favicon.ico")
+        link(rel="apple-touch-icon" href="./public/media/favicon.ico")
+        title Name of web app
+        script(src="./public/js/app.js" defer) 
+        link(rel='stylesheet', href='./public/css/style.css', type='text/css')
+        link(rel="preload" as="font")
+        link(rel="manifest" href="./public/manifest.json")
+        meta(name="theme-color" content="#317EFB")
+
+    body
+        .container
+            each item in data 
+                img(src=item.pic, alt="")
+                h1 #{item.title}
+                p #{item.description}
+                a(href=item.linkedin) You can check my linkedin and ask me a question on it
+            
