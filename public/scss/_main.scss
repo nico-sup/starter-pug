@@ -7,10 +7,11 @@ html,body {
     min-height: 100vh;
     width: 100%;
     font-family: sans-serif;
+    box-sizing: border-box;
 }
 
 .container {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     padding: 50px;
     display: flex;
@@ -29,4 +30,32 @@ html,body {
         color: $color-orange;
         margin-bottom: 30px;
     }
+    .article {
+        width: 200px;
+        border:$color-grey solid 1px;
+        margin: 40px;
+        padding: 20px;
+        display: grid;
+        justify-items: center;
+        .seeArticle {
+            text-decoration: none;
+            background-color: $color-orange;
+            padding: 10px 20px;
+            color: white;
+            border-radius: 20px;
+        }
+        p {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;  
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        img {
+            height: auto;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+    
 }

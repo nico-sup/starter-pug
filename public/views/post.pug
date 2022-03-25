@@ -1,0 +1,34 @@
+include article.pug
+
+html(lang="en")
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='description', content='Some description')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        link(rel="icon", type="image/png", href="/public/media/favicon.ico")
+        link(rel="apple-touch-icon" href="/public/media/favicon.ico")
+        title Name of web app
+        script(src="/public/js/app.js" defer) 
+        link(rel='stylesheet', href='/public/css/style.css', type='text/css')
+        link(rel="preload" as="font")
+        link(rel="manifest" href="/public/manifest.json")
+
+    body
+        .recette_container
+            each rec in recette
+                if rec.id === id
+                    img(src=rec.pict, alt='' class="banner")
+                    p #{rec.title}
+                    div #{rec.description}
+                    .recette_block 
+                        img(src=rec.secondPict, alt='' class="secondPic")
+
+                        h2 Ingrédients
+                        each ingre in rec.ingredient
+                            ul
+                                li #{ingre}
+                        h2 Préparation 
+                        each prepa in rec.preparation
+                            ul
+                                li #{prepa}
